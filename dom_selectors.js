@@ -1,21 +1,32 @@
-let events = document.querySelectorAll(
-  '[data-testid=categoryResults-eventCard]'
-);
-let eventsInfo = [];
-for (let event of events) {
-  const text = event.innerText;
-  const textArray = text.split('\n');
-  const anchorTag = event.querySelector('a');
-  const link = anchorTag.getAttribute('href');
-  const eventInfo = {
-    date: textArray[0],
-    name: textArray[1],
-    attendes: Number(textArray[6].split(' ')[0]),
-    link: link,
-  };
-  console.log(eventInfo);
-  eventsInfo.push(eventInfo);
-}
-console.log(eventsInfo);
+// https://lr.riverside.rocks/
+let randomNumberVariable = 1;
+let randomStringVariable = 'main';
+let mainTag = document.querySelector(randomStringVariable);
+//To select by tag name just put tag name
+let aTagInsideMaintag = mainTag.querySelector('a');
+//To select by id attribute we use #id
+let getElemebentUsingId = document.querySelector('#sort_options');
+//To select by class attribute we use .class
+let selectedElementByClass = document.querySelector('.selected');
 
-//convert final object into JSON with JSON.stringify() and then copy and paste in a csv converter
+//To select by attribute [attributeName="value"]
+let attributedSelectedElement = document.querySelector('[href="/settings"]');
+
+//To select more than one we use querySelectorAll
+let allClassPost = mainTag.querySelectorAll('.post');
+
+//Select with combined selectors
+let use2Selectors = document.querySelectorAll('div.post#z78r84');
+//If you want to select inside of another selectr example all hr tags inside of divs you use spaces
+let insideOfExtraSelector = document.querySelectorAll('div hr');
+//Innertext
+console.log(mainTag.innerText, mainTag.innerHTML);
+
+/* 
+
+Basic
+Select all p tags inside of each postcard
+Advanced
+Select all the event cards in the meetup website
+
+ */
