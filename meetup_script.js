@@ -5,8 +5,8 @@ let eventsInfo = [];
 for (let event of events) {
   const text = event.innerText;
   const textArray = text.split('\n');
-  const anchorTag = event.querySelector('a');
-  const link = anchorTag.getAttribute('href');
+  /*  const anchorTag = event.querySelector('a');
+  const link = anchorTag.getAttribute('href'); */
   const eventInfo = {
     date: textArray[0],
     name: textArray[1],

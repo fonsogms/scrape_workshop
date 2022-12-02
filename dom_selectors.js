@@ -1,5 +1,6 @@
 // https://lr.riverside.rocks/
 let randomNumberVariable = 1;
+
 let randomStringVariable = 'main';
 let mainTag = document.querySelector(randomStringVariable);
 //To select by tag name just put tag name
@@ -19,7 +20,8 @@ let allClassPost = mainTag.querySelectorAll('.post');
 let use2Selectors = document.querySelectorAll('div.post#z78r84');
 //If you want to select inside of another selectr example all hr tags inside of divs you use spaces
 let insideOfExtraSelector = document.querySelectorAll('div hr');
-//Innertext
+
+// Explain!!!!! Innertext and innerHtml
 console.log(mainTag.innerText, mainTag.innerHTML);
 
 /* 
@@ -28,5 +30,4 @@ Basic
 Select all p tags inside of each postcard
 Advanced
 Select all the event cards in the meetup website
-
  */
